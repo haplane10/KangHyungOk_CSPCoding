@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1. Main.unity
+    guid: dc74260e332e68e438c830734a741c68
+  - enabled: 1
+    path: Assets/Scenes/2. Category.unity
+    guid: c4722af34cc693e4ea38016aca01f7d8
+  - enabled: 1
+    path: Assets/Scenes/3_1. Select(Dance).unity
+    guid: 5f9dcdd7a1bc67f46964afecc89eb4ac
+  - enabled: 1
+    path: Assets/Scenes/3_2. Select(Instrument).unity
+    guid: 68b0d0fc64798144ca06e6f1a4884f4f
+  - enabled: 1
+    path: Assets/Scenes/3_3. Select(Cook).unity
+    guid: ca5bc0f7bb937624bbf70385f49c23a8
+  - enabled: 1
+    path: Assets/Scenes/4_1. Capture(Dance).unity
+    guid: 1fabfecd114c4a74ea54774fe0198d86
+  - enabled: 1
+    path: Assets/Scenes/5. Play.unity
+    guid: 2aed0cda7bc36034b9c0392201e48984
+  - enabled: 1
+    path: Assets/Scenes/6. End.unity
+    guid: 2cfa37635884d7940bef17db558b1c85
   m_configObjects: {}
