@@ -17,14 +17,14 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
-        foreach (var hovered in eventData.hovered)
-        {
-            if (hovered.gameObject.name.Contains("BGPanel"))
-            {
-                rectTransform.SetParent(eventData.hovered[0].transform);
-                return;
-            }
-        }
+        //foreach (var hovered in eventData.hovered)
+        //{
+        //    if (hovered.gameObject.name.Contains("BGPanel"))
+        //    {
+        //        rectTransform.SetParent(eventData.hovered[0].transform);
+        //        return;
+        //    }
+        //}
     }
 
     public void OnDrag(PointerEventData eventData)

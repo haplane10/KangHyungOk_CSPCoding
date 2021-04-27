@@ -22,9 +22,33 @@ public class DeviceCamera : MonoBehaviour
     [SerializeField] Image capturedImage;
     int photoCount;
 
+    [SerializeField] RectTransform scrollContent;
+    [SerializeField] GameObject capturedPrefab;
+    int offsetX = 340;
+    int lastXPos;
+    int imageFileCount = 0;
+    string folderName = "/UserPicture";
+    string imageFileName = "photo";
+
     void Start()
     {
-        GetImageFile();
+        imageFileCount = CheckImageFileInDirectory();
+        lastXPos = (offsetX * 5) + 80;
+        if (imageFileCount > 0)
+        {
+            for (int i = 0; i < imageFileCount; i++)
+            {
+                CreateImageObject(i);
+            }
+        }
+    }
+
+    void CreateImageObject(int idx)
+    {
+        var fileSprite = GetImageFile(imageFileName + idx.ToString() + ".png");
+        var imageObject = Instantiate(capturedPrefab, scrollContent);
+        imageObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(lastXPos += offsetX, 0);
+        imageObject.GetComponent<Image>().sprite = fileSprite;
     }
 
     public void OnCameraDeviceButtonClick()
@@ -58,7 +82,6 @@ public class DeviceCamera : MonoBehaviour
 //        renderer.material.mainTexture = activeCameraTexture; //Add Mesh Renderer to the GameObject to which this script is attached to
 //        activeCameraTexture.Play();
 //#else
-
         if (WebCamTexture.devices.Length == 0)
         {
             Debug.Log("No Webcam");
@@ -95,31 +118,38 @@ public class DeviceCamera : MonoBehaviour
         //Encode to a PNG
         byte[] bytes = photo.EncodeToPNG();
         //Write out the PNG. Of course you have to substitute your_path for something sensible
-        File.WriteAllBytes(Application.persistentDataPath + "/UserPicture/photo.png", bytes);
+        File.WriteAllBytes(Application.persistentDataPath + folderName + "/" + imageFileName + imageFileCount.ToString() + ".png", bytes);
+        CreateImageObject(imageFileCount);
+        imageFileCount++;
 
         activeCameraTexture.Stop();
     }
 
-    void GetImageFile()
+    Sprite GetImageFile(string fileName)
     {
-        
-        if (!Directory.Exists(Application.persistentDataPath + "/UserPicture"))
-        {
-            Directory.CreateDirectory(Application.persistentDataPath + "/UserPicture");
-        }
-        else
-        {
-            Debug.Log(Directory.GetFiles(Application.persistentDataPath + "/UserPicture").Length.ToString());
-        }
-
-        if (File.Exists(Application.persistentDataPath + "/UserPicture/photo.png")) {
-            byte[] byteArray = File.ReadAllBytes(Application.persistentDataPath + "/UserPicture/photo.png");
+        Sprite fileSprite = null;
+        if (File.Exists(Application.persistentDataPath + folderName + "/" + fileName)) {
+            byte[] byteArray = File.ReadAllBytes(Application.persistentDataPath + folderName + "/" + fileName);
             Texture2D texture = new Texture2D(8, 8);
             if (texture.LoadImage(byteArray))
             {
-                capturedImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero, 1f);
+                fileSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero, 1f);
             }
-            //Sprite s = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero, 1f);
+        }
+        return fileSprite;
+    }
+
+    int CheckImageFileInDirectory()
+    {
+        if (!Directory.Exists(Application.persistentDataPath + folderName))
+        {
+            Directory.CreateDirectory(Application.persistentDataPath + folderName);
+            return 0;
+        }
+        else
+        {
+            Debug.Log(Application.persistentDataPath);
+            return Directory.GetFiles(Application.persistentDataPath + folderName).Length;
         }
     }
 }
