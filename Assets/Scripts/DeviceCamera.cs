@@ -54,34 +54,34 @@ public class DeviceCamera : MonoBehaviour
     public void OnCameraDeviceButtonClick()
     {
 
-//#if PLATFORM_ANDROID
-//        if (!Permission.HasUserAuthorizedPermission(Permission.Camera))
-//        {
-//            Permission.RequestUserPermission(Permission.Camera);
-//        }
+#if PLATFORM_ANDROID
+        if (!Permission.HasUserAuthorizedPermission(Permission.Camera))
+        {
+            Permission.RequestUserPermission(Permission.Camera);
+        }
 
-//        //if (WebCamTexture.devices.Length == 0)
-//        //{
-//        //    Debug.Log("No Webcam");
-//        //    cameraText.text = "No devices cameras found";
-//        //    return;
-//        //}
+        //if (WebCamTexture.devices.Length == 0)
+        //{
+        //    Debug.Log("No Webcam");
+        //    cameraText.text = "No devices cameras found";
+        //    return;
+        //}
 
-//        frontCameraDevice = WebCamTexture.devices.Last();
-//        //backCameraDevice = WebCamTexture.devices.First();
+        frontCameraDevice = WebCamTexture.devices.Last();
+        //backCameraDevice = WebCamTexture.devices.First();
 
-//        frontCameraTexture = new WebCamTexture(frontCameraDevice.name);
-//        //backCameraTexture = new WebCamTexture(backCameraDevice.name);
+        frontCameraTexture = new WebCamTexture(frontCameraDevice.name);
+        //backCameraTexture = new WebCamTexture(backCameraDevice.name);
 
-//        frontCameraTexture.filterMode = FilterMode.Trilinear;
-//        //backCameraTexture.filterMode = FilterMode.Trilinear;
+        frontCameraTexture.filterMode = FilterMode.Trilinear;
+        //backCameraTexture.filterMode = FilterMode.Trilinear;
 
-//        activeCameraTexture = frontCameraTexture;
-//        activeCameraDevice = WebCamTexture.devices.FirstOrDefault(device => device.name == frontCameraTexture.deviceName);
+        activeCameraTexture = frontCameraTexture;
+        activeCameraDevice = WebCamTexture.devices.FirstOrDefault(device => device.name == frontCameraTexture.deviceName);
 
-//        renderer.material.mainTexture = activeCameraTexture; //Add Mesh Renderer to the GameObject to which this script is attached to
-//        activeCameraTexture.Play();
-//#else
+        renderer.material.mainTexture = activeCameraTexture; //Add Mesh Renderer to the GameObject to which this script is attached to
+        activeCameraTexture.Play();
+#else
         if (WebCamTexture.devices.Length == 0)
         {
             Debug.Log("No Webcam");
@@ -92,7 +92,7 @@ public class DeviceCamera : MonoBehaviour
         activeCameraTexture = new WebCamTexture();
         renderer.material.mainTexture = activeCameraTexture; //Add Mesh Renderer to the GameObject to which this script is attached to
         activeCameraTexture.Play();
-//#endif
+#endif
     }
 
     public void OnTakePhotoButtonClick()

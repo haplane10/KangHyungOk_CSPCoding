@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 30687137}
   - component: {fileID: 30687136}
   - component: {fileID: 30687135}
+  - component: {fileID: 30687138}
   m_Layer: 5
   m_Name: BananaChaChaButton
   m_TagString: Untagged
@@ -207,7 +208,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 30687136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256417541}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 30687138}
+        m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
+        m_MethodName: OnMusicButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &30687136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +271,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30687133}
   m_CullTransparentMesh: 0
+--- !u!114 &30687138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30687133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89d33a972eff9a40a5dae36199e08f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: 01dd4719bf44c0843af2d03ec5632620, type: 3}
+  musicImage: {fileID: 21300000, guid: 7d3fd1daa2dccc141a61584c1a5930bd, type: 3}
 --- !u!1 &119502152
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +522,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 246687054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256417541}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 967055615}
+        m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
+        m_MethodName: OnMusicButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &246687054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,6 +996,7 @@ GameObject:
   - component: {fileID: 967055614}
   - component: {fileID: 967055613}
   - component: {fileID: 967055612}
+  - component: {fileID: 967055615}
   m_Layer: 5
   m_Name: BabySharkButton
   m_TagString: Untagged
@@ -1004,7 +1068,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 967055613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256417541}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 967055615}
+        m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
+        m_MethodName: OnMusicButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &967055613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1131,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967055610}
   m_CullTransparentMesh: 0
+--- !u!114 &967055615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967055610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89d33a972eff9a40a5dae36199e08f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: 01dd4719bf44c0843af2d03ec5632620, type: 3}
+  musicImage: {fileID: 21300000, guid: 2108953241016374f844e2a9b83aa60b, type: 3}
 --- !u!1 &1150495916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1220,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150495916}
   m_CullTransparentMesh: 1
+--- !u!1001 &1256417540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8917579030572318803, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917579030572318805, guid: 1fa72873cf40f684a9a8de9418c09f55,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fa72873cf40f684a9a8de9418c09f55, type: 3}
+--- !u!114 &1256417541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8917579030572318804, guid: 1fa72873cf40f684a9a8de9418c09f55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1256417540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a16ad3041192024580625cb0662bcac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1523085910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1383,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1523085913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256417541}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 30687138}
+        m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
+        m_MethodName: OnMusicButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1523085913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,6 +1620,7 @@ GameObject:
   - component: {fileID: 1935138025}
   - component: {fileID: 1935138024}
   - component: {fileID: 1935138023}
+  - component: {fileID: 1935138026}
   m_Layer: 5
   m_Name: DinoMechardButton
   m_TagString: Untagged
@@ -1484,7 +1692,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1935138024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256417541}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1935138026}
+        m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
+        m_MethodName: OnMusicButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1935138024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,6 +1755,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935138021}
   m_CullTransparentMesh: 0
+--- !u!114 &1935138026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935138021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89d33a972eff9a40a5dae36199e08f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: 01dd4719bf44c0843af2d03ec5632620, type: 3}
+  musicImage: {fileID: 21300000, guid: 2892da0f467998d4daa0d147bbc346d8, type: 3}
 --- !u!1 &2051113462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +2005,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2141235419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256417541}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1935138026}
+        m_TargetAssemblyTypeName: MusicSelect, Assembly-CSharp
+        m_MethodName: OnMusicButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2141235419
 MonoBehaviour:
   m_ObjectHideFlags: 0

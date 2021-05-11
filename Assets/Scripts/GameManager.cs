@@ -6,10 +6,23 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public List<Sprite> DanceImages;
+    public AudioClip musicClip;
+    public Sprite musicImage;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+
     // Start is called before the first frame update
     void Start()
     {

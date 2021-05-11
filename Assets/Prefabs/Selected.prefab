@@ -88,3 +88,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1fea874368f8ac469cdafb7b365175d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DanceImage: {fileID: 7395291273140015607}
